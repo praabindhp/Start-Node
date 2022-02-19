@@ -1,15 +1,10 @@
-// const path = require('path');
+const EventEmmitter = require('events');
+const emitter = new EventEmmitter();
 
-// var pathObj = path.parse(__filename);
-
-// console.log(pathObj)
-
-const fs = require('fs');
-
-const files = fs.readdirSync('./');
-console.log(files);
-
-fs.readdir('./', function(err, files){
-    if (err) console.log('Error', err);
-    else console.log('Result', files);
+// Register A Listener
+emitter.on('messageLogged', function(){
+    console.log('Listerner Called');
 });
+
+// Rised An Event
+emitter.emit('messageLogged'); // Emit -  Produce Something
