@@ -2,9 +2,9 @@ const EventEmmitter = require('events');
 const emitter = new EventEmmitter();
 
 // Register A Listener
-emitter.on('messageLogged', function(){
-    console.log('Listerner Called');
+emitter.on('messageLogged', (arg) => {
+    console.log('Listerner Called', arg);
 });
 
 // Rised An Event
-emitter.emit('messageLogged'); // Emit -  Produce Something
+emitter.emit('messageLogged', { id: 1, url: 'http://'}); // Emit -  Produce Something
