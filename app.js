@@ -8,3 +8,6 @@ emitter.on('messageLogged', (arg) => {
 
 // Rised An Event
 emitter.emit('messageLogged', { id: 1, url: 'http://'}); // Emit -  Produce Something
+
+const log = require('./logger');
+log('message');
