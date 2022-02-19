@@ -6,7 +6,7 @@
     var url = 'http://mylogger.io/log';
 
     function log(message){
-        // Send HTTP Request
+        // Send HTTP Request For Log
         console.log(message);
     }
 
